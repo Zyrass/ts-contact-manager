@@ -1,0 +1,27 @@
+{
+    "include": ["./src"], // Spécifie les fichiers TypeScript à compiler (dans le dossier "src" ici)
+
+    "compilerOptions": {
+        "incremental": true, // Accélère la vitesse de reconstruction en conservant certaines informations entre les compilations
+        "target": "ESNext", // Version ciblée d'ECMAScript (la dernière version possible ici)
+        "module": "CommonJS", // Spécifie le standard des modules à utiliser pour les imports/exports
+        // "moduleResolution": "NodeNext",
+        "sourceMap": true, // Génère des fichiers de mappage pour établir un lien entre les codes TypeScript et JavaScript
+        "outDir": "./build", // Dossier de destination pour les fichiers JavaScript transpilés
+        "removeComments": true, // Supprime les commentaires du code JavaScript généré
+
+        /* Contraintes d'interopérabilité */
+        "esModuleInterop": true, // Génère du code JavaScript supplémentaire pour faciliter l'importation de modules CommonJS
+        "forceConsistentCasingInFileNames": true, // Assure une cohérence de casse lors de l'importation de fichiers
+
+        /* Vérification des types */
+        "strict": true, // Active toutes les options de vérification de type strictes
+        "noUnusedLocals": true, // Génère une erreur pour les variables locales non utilisées
+        "noUnusedParameters": true, // Génère une erreur pour les paramètres de fonction non utilisés
+        "noImplicitReturns": true, // Génère une erreur pour les fonctions sans retour explicite
+        "noFallthroughCasesInSwitch": true, // Génère une erreur pour les cas de décalage dans les déclarations switch sans "break"
+
+        /* Exhaustivité */
+        "skipLibCheck": true // Ignore la vérification des fichiers .d.ts externes (fichiers de déclaration de type)
+    }
+}
